@@ -1,0 +1,650 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header_container {
+  width: 80%;
+  padding: 20px 60px;
+  margin: 0 auto;
+  background-color: rgb(75, 67, 126);
+  display: flex;
+  justify-content: space-between;
+}
+.header_container h2 {
+  color: white;
+}
+.header_container ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 60%;
+}
+.header_container li {
+  width: 20%;
+  font-size: 18px;
+  margin-top: 7px;
+  text-align: center;
+}
+.header_container a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+.header_container a::before,
+.header_container a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.header_container a::before {
+  left: 0;
+}
+.header_container a::after {
+  right: 0;
+}
+.header_container a:hover::before,
+.header_container a:hover::after {
+  width: 50%;
+}
+
+.typeOfBooks {
+  display: flex;
+  width: 12%;
+  flex-direction: column;
+  position: absolute;
+  left: 78%;
+  top: 10%;
+  padding: 13px;
+  padding-top: 25px;
+  background-color: rgba(75, 67, 126, 0.706);
+  opacity: 0;
+  z-index: 5;
+}
+.typeOfBooks a {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+.typeOfBooks a:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.bestseller_books {
+  text-align: center;
+  margin: 30px 0;
+  color: rgb(75, 67, 126);
+  letter-spacing: 5px;
+  animation: bestseller 2s;
+}
+
+.bestOfBooks {
+  margin-left: 65px;
+}
+
+.bestsellerBooks {
+  width: 79%;
+  color: rgb(75, 67, 126);
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.bestsellerBooks div {
+  border: 1px gray solid;
+  width: 20%;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bestsellerBooks div img {
+  width: 85%;
+  max-height: 200px;
+}
+.bestsellerBooks div h2 {
+  padding: 5px 15px;
+  margin-top: 5px;
+  font-size: 17px;
+  flex-grow: 1;
+}
+.bestsellerBooks div p {
+  font-style: italic;
+}
+.bestsellerBooks .listAndCart {
+  padding: 0;
+  border: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bestsellerBooks .listAndCart button {
+  width: 46%;
+  font-size: 11px;
+  padding: 10px 7px;
+  border: none;
+  background-color: rgb(75, 67, 126);
+  color: white;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+.bestsellerBooks .listAndCart button:hover {
+  background-color: white;
+  border: 2px rgb(75, 67, 126) solid;
+  color: rgb(75, 67, 126);
+  padding: 8px 5px;
+}
+
+@keyframes bestseller {
+  from {
+    opacity: 0;
+    scale: 0.1;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+.about_container {
+  width: 65%;
+  display: flex;
+  margin: 100px auto;
+  justify-content: space-between;
+}
+.about_container .circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  background-color: rgb(75, 67, 126);
+  position: absolute;
+  left: 170px;
+  right: 0px;
+  top: 150px;
+  bottom: 0;
+  z-index: 0;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.4);
+  animation: circle 3s;
+}
+.about_container .girlWithBook {
+  width: 40%;
+  height: 520px;
+  z-index: 1;
+  border-radius: 20px;
+}
+.about_container .texts {
+  width: 45%;
+}
+.about_container .texts h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+.about_container .texts hr {
+  color: rgb(75, 67, 126);
+  margin-top: 25px;
+  width: 350px;
+  border: 4.5px solid;
+}
+.about_container .texts .phoneIcon {
+  width: 60px;
+  margin-top: 20px;
+  animation: phonenum 3s;
+}
+.about_container .texts .first_p {
+  margin: 40px 0;
+  line-height: 35px;
+  font-size: 17px;
+}
+.about_container .texts .second_p {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+}
+.about_container .texts .phoneNumber {
+  animation: phonenum 3s;
+  font-size: 40px;
+  margin-top: 22px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.about_container .texts .phoneNumber:hover {
+  text-decoration: none;
+  color: rgb(75, 67, 126);
+}
+
+@keyframes phonenum {
+  from {
+    opacity: 0;
+    scale: 0.1;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes circle {
+  from {
+    margin-left: -400px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.formLoginContainer {
+  position: relative;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.4);
+  padding: 30px 20px;
+  width: 30%;
+  margin: 30px auto;
+}
+.formLoginContainer .openEye {
+  width: 22px;
+  cursor: pointer;
+  position: absolute;
+  left: 108px;
+  top: 202px;
+}
+.formLoginContainer .login_h2 {
+  color: rgb(75, 67, 126);
+}
+.formLoginContainer .form-group {
+  margin: 15px 0;
+}
+.formLoginContainer input {
+  width: 100%;
+}
+.formLoginContainer a {
+  color: black;
+  text-decoration: none;
+}
+.formLoginContainer a:hover {
+  color: rgb(75, 67, 126);
+}
+.formLoginContainer .login_button {
+  width: 42%;
+  font-size: 15px;
+  padding: 10px 7px;
+  border: none;
+  background-color: rgb(75, 67, 126);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.formLoginContainer .login_button:hover {
+  background-color: white;
+  border: 2px rgb(75, 67, 126) solid;
+  color: rgb(75, 67, 126);
+  padding: 8px 5px;
+}
+.formLoginContainer .login_and_a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.formLoginContainer .forgotandalert {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+.formLoginContainer .alertMessage {
+  color: red;
+  opacity: 0;
+}
+
+.forgot_password {
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  left: 258px;
+  top: 285px;
+}
+
+.forgot_password:hover {
+  border: none;
+  background-color: white;
+  color: rgb(75, 67, 126);
+}
+
+.formRegisterContainer {
+  position: relative;
+  width: 30%;
+  margin: 30px 170px;
+}
+.formRegisterContainer .secondopenEye {
+  width: 20px;
+  position: absolute;
+  left: 88px;
+  top: 393px;
+  cursor: pointer;
+}
+.formRegisterContainer .thirdopenEye {
+  width: 20px;
+  position: absolute;
+  left: 155px;
+  top: 478px;
+  cursor: pointer;
+}
+.formRegisterContainer .register_h2 {
+  color: rgb(75, 67, 126);
+}
+.formRegisterContainer .form-group {
+  margin-top: 10px;
+}
+.formRegisterContainer button {
+  width: 40%;
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 8px 7px;
+  border: none;
+  background-color: rgb(75, 67, 126);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.formRegisterContainer button:hover {
+  background-color: white;
+  border: 2px rgb(75, 67, 126) solid;
+  color: rgb(75, 67, 126);
+  padding: 7px 5px;
+}
+
+.registerImg {
+  width: 40%;
+}
+
+.nameOfCategories {
+  margin: 40px 0px;
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+}
+.nameOfCategories h2 {
+  color: rgb(75, 67, 126);
+}
+.nameOfCategories a {
+  color: black;
+  margin-top: 6px;
+}
+.nameOfCategories a:hover {
+  text-decoration: none;
+  color: rgb(75, 67, 126);
+}
+
+.quotations {
+  position: relative;
+}
+.quotations img {
+  width: 537px;
+}
+.quotations .Anton {
+  position: absolute;
+  top: 87px;
+  left: 642px;
+}
+.quotations .Stephen {
+  position: absolute;
+  top: 379px;
+  left: 194px;
+}
+.quotations .Thomas {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.kindofBooks {
+  width: 79%;
+  color: rgb(75, 67, 126);
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.kindofBooks div {
+  border: 1px gray solid;
+  width: 21%;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.kindofBooks div img {
+  width: 55%;
+  max-height: 200px;
+}
+.kindofBooks div h2 {
+  padding: 5px 15px;
+  margin-top: 5px;
+  font-size: 17px;
+  flex-grow: 1;
+}
+.kindofBooks div p {
+  font-style: italic;
+}
+.kindofBooks .listAndCart {
+  padding: 0;
+  border: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.kindofBooks .listAndCart button {
+  width: 46%;
+  font-size: 11px;
+  padding: 10px 7px;
+  border: none;
+  background-color: rgb(75, 67, 126);
+  color: white;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: 0.3s;
+}
+.kindofBooks .listAndCart button:hover {
+  background-color: white;
+  border: 2px rgb(75, 67, 126) solid;
+  color: rgb(75, 67, 126);
+  padding: 8px 5px;
+}
+
+.basket_button {
+  background-color: brown;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  top: 10px;
+  right: 20px;
+}
+.basket_button img {
+  width: 30px;
+}
+
+.cart {
+  width: 130%;
+  color: rgb(75, 67, 126);
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cart .item {
+  position: relative;
+  border: 1px gray solid;
+  width: 75%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart .item .trashIcon {
+  width: 20px;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  top: 125px;
+  left: 428px;
+  cursor: pointer;
+}
+.cart .item .plusminus {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 60px;
+}
+.cart .item .plusminus h1 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.cart .item .plusminus button {
+  border: none;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+}
+.cart .item .imgh2p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.cart .item .h2p {
+  margin-left: 20px;
+}
+.cart .item img {
+  width: 30%;
+  max-height: 200px;
+}
+.cart .item h2 {
+  margin: 10px 0;
+  font-size: 17px;
+  flex-grow: 1;
+  text-align: start;
+}
+.cart .item p {
+  font-style: italic;
+  text-align: start;
+  font-size: 15px;
+}
+
+.list {
+  width: 130%;
+  color: rgb(75, 67, 126);
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.list .item {
+  position: relative;
+  border: 1px gray solid;
+  width: 75%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list .item .trashIcon {
+  width: 20px;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  top: 125px;
+  left: 428px;
+  cursor: pointer;
+}
+.list .item .plusminus {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 60px;
+}
+.list .item .plusminus h1 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.list .item .plusminus button {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: white;
+}
+.list .item .imgh2p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+.list .item .h2p {
+  margin-left: 20px;
+}
+.list .item img {
+  width: 30%;
+  max-height: 200px;
+}
+.list .item h2 {
+  margin: 10px 0;
+  font-size: 17px;
+  flex-grow: 1;
+  text-align: start;
+}
+.list .item p {
+  font-style: italic;
+  text-align: start;
+  font-size: 15px;
+}
+
+.close_button {
+  border: none;
+  font-size: 15px;
+  background-color: rgb(75, 67, 126);
+  color: white;
+  cursor: pointer;
+}
+
+.close_button:hover {
+  border: none;
+  background-color: white;
+  color: rgb(75, 67, 126);
+}
+
+.list_button {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  top: 10px;
+  right: 50px;
+}
+.list_button img {
+  width: 30px;
+}
+
+.typeNames {
+  letter-spacing: 3px;
+  animation: bestseller 2s;
+  color: rgb(75, 67, 126);
+  position: absolute;
+  top: 120px;
+  z-index: 5;
+  left: 700px;
+}
